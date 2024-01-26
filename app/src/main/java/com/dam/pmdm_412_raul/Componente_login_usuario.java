@@ -8,6 +8,7 @@ import android.widget.LinearLayout;
 
 public class Componente_login_usuario extends LinearLayout {
     private EditText textoUsuario;
+
     public Componente_login_usuario(Context context) {
         super(context);
         inicializar();
@@ -28,4 +29,5 @@ public class Componente_login_usuario extends LinearLayout {
 
         textoUsuario = (EditText)findViewById(R.id.TextoUsuario);
     }
+
 }
