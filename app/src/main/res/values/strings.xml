@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PMDM_4.1.2_Raul</string>
+    <string name="password">Password</string>
+    <string name="username">Username</string>
 </resources>

@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.dam.pmdm_412_raul"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.dam.pmdm_412_raul"
