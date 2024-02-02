@@ -7,7 +7,6 @@ import android.util.AttributeSet;
 import android.view.LayoutInflater;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import java.util.regex.Matcher;
 
 public class Componente_login_usuario extends LinearLayout {
     private EditText textoUsuario;
@@ -25,8 +24,7 @@ public class Componente_login_usuario extends LinearLayout {
     }
 
     private void inicializar() {
-        String inflaterService = Context.LAYOUT_INFLATER_SERVICE;
-        LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(inflaterService);
+        LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         layoutInflater.inflate(R.layout.componente_login_usuario, this, true);
 
@@ -40,7 +38,7 @@ public class Componente_login_usuario extends LinearLayout {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-            validarFormato();
+            validarFormato(s.toString());
             }
 
             @Override
@@ -50,7 +48,15 @@ public class Componente_login_usuario extends LinearLayout {
         });
     }
 
-    private void validarFormato() {
+    private void validarFormato(String string) {
+        // Validar el formato del usuario (username@bikeforall.es)
+        if (string.matches("[a-zA-Z0-9._-]+@bikeforall.es")) {
+            // Formato correcto
+            System.out.println("Formato correcto.");
+        } else {
+            // Formato incorrecto
+            textoUsuario.setError("Formato incorrecto.");
+        }
 
     }
 

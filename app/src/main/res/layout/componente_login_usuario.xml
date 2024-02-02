@@ -11,6 +11,7 @@
             android:inputType="text"
             android:hint="@string/username"
             android:ems="10"
+            android:textStyle="bold"
             android:id="@+id/TextoUsuario"
     />
 </LinearLayout>

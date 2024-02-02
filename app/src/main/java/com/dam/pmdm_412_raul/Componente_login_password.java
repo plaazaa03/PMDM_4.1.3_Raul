@@ -19,13 +19,13 @@ public class Componente_login_password extends LinearLayout {
     }
 
     private void inicializar() {
-        String inflaterService = Context.LAYOUT_INFLATER_SERVICE;
-        LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(inflaterService);
+
+        LayoutInflater layoutInflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
         layoutInflater.inflate(R.layout.componente_login_password, this, true);
 
-        textPassword = (EditText)findViewById(R.id.TextoPassword);
-        lengthText = (TextView)findViewById(R.id.textView);
+        textPassword = findViewById(R.id.TextoPassword);
+        lengthText = findViewById(R.id.textView);
 
 
         textPassword.addTextChangedListener(new TextWatcher() {
@@ -49,10 +49,10 @@ public class Componente_login_password extends LinearLayout {
 
     private void validarContraseña() {
         if (textPassword.length() < 8){
-            lengthText.setText("Longitud minima: " + textPassword);
+            lengthText.setText("Longitud minima: " + textPassword.length());
             lengthText.setBackgroundColor(Color.RED);
         }else{
-            lengthText.setText("Longitud: " + textPassword);
+            lengthText.setText("Longitud: " + textPassword.length());
             lengthText.setBackgroundColor(Color.GREEN);
         }
     }

@@ -5,11 +5,13 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity" android:orientation="vertical">
+        android:gravity="center"
+        tools:context=".MainActivity"
+        android:orientation="vertical">
 
 
         <TextView
-                android:text="@string/bike_for_all"
+                android:text="Bike For All"
                 android:textSize="48sp"
                 android:layout_width="270dp"
                 android:layout_height="72dp"
@@ -19,8 +21,23 @@
                 android:layout_marginLeft="20dp"
                 android:layout_marginRight="20dp"
         />
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/bici"
+                android:layout_margin="10dp"
+
+
+
+        />
+
+
+
+
+
+
         <TextView
-                android:text="@string/welcome_to_bike_for_all"
+                android:text="Welcome to Bike For All"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" android:id="@+id/textView2"
                 app:layout_constraintTop_toBottomOf="@+id/textView"
@@ -32,6 +49,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/componente_login_usuario"
+                android:layout_margin="10dp"
                 tools:layout_editor_absoluteY="0dp"
                 tools:layout_editor_absoluteX="0dp"
                 />
@@ -43,7 +61,27 @@
                 android:id="@+id/componente_login_password"
                 tools:layout_editor_absoluteY="0dp"
                 tools:layout_editor_absoluteX="0dp"/>
-
+        <CheckBox
+                android:text="Remember me"
+                android:layout_width="wrap_content"
+                android:layout_margin="10dp"
+                android:scrollbarStyle="outsideInset"
+                android:checked="false"
+                android:textStyle=""
+                android:layout_height="wrap_content" android:id="@+id/checkBox"/>
+        <Button
+                android:text="Login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/button"
+                android:layout_margin="20dp"/>
+        <TextView
+                android:text="Forgot password?"
+                android:textSize="20dp"
+                android:textStyle="italic"
+                android:textColor="@color/material_dynamic_neutral20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/textView3"/>
 
 
 </LinearLayout>
